@@ -1,6 +1,4 @@
-var app = angular.module('JuliusAkula',['ui.router', // angular routing
-        'ngClipboard' // copy to clipboard
-    ]).config(['ngClipProvider', function(ngClipProvider) { 
+angular.module('JuliusAkula',['ui.router', 'ngClipboard']).config(['ngClipProvider', function(ngClipProvider) { 
     ngClipProvider.setPath("/node_modules/zeroclipboard/dist/ZeroClipboard.swf");
 }]).controller('CtrlOne', function($scope){
     $scope.hello = "Hello!!";
