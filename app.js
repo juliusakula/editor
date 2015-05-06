@@ -1,4 +1,14 @@
-angular.module('JuliusAkula',['ui.router', 'ngClipboard']).config(['ngClipProvider', function(ngClipProvider) { 
+angular.module('JuliusAkula',['ui.router', 'ngClipboard']).config(['ngClipProvider', '$stateProvider', '$urlRouterProvider', function(ngClipProvider, $stateProvider, $urlRouterProvider){
+    
+    $urlRouterProvider.otherwise("/");
+    $stateProvider.state('index', {
+        url: "/",
+        templateUrl: 'src/views/homepage.tpl.html',
+        controller: function($scope){
+            $scope.btns = "btn btn-";
+        }
+    });
+    
     ngClipProvider.setPath("/node_modules/zeroclipboard/dist/ZeroClipboard.swf");
 }]).controller('CtrlOne', function($scope){
     $scope.hello = "Hello!!";
