@@ -25,16 +25,6 @@
 <body ng-app="JuliusAkula">
     <div ng-include="'src/views/nav.tpl.html'"></div>
 </div>
-<div class="row">
-    <div ng-controller="textInputController" class="col-xs-5 col-xs-offset-1">
-        <br>
-        <textarea rows="3" ng-model="text" style="width: 100%;"></textarea>
-    </div>
-    <div ng-controller="readmeOutputController" class="col-xs-5">
-        <br>
-        <md ng-model="text.text"></md>
-    </div>
-</div>
     <div ui-view></div>
 </body>
 </html>
