@@ -6,14 +6,7 @@ angular.module('JuliusAkula',['ui.router', 'ngClipboard']).config(['ngClipProvid
         templateUrl: 'src/views/homepage.tpl.html',
         controller: function($scope){
             $scope.btns = "btn btn-";
-        }
-    });
-    
-    ngClipProvider.setPath("/node_modules/zeroclipboard/dist/ZeroClipboard.swf");
-}]).controller('CtrlOne', function($scope){
-    $scope.hello = "Hello!!";
-    $scope.asdfClass = "btn btn-primary";
-    $scope.types = [
+            $scope.types = [
             {
                 type: 'default',
                 message: 'Default Dialog'
@@ -38,4 +31,11 @@ angular.module('JuliusAkula',['ui.router', 'ngClipboard']).config(['ngClipProvid
                 type: 'info',
                 message: 'Info Dialog'
             }];
+        }
+    });
+    
+    ngClipProvider.setPath("/node_modules/zeroclipboard/dist/ZeroClipboard.swf");
+}]).controller('CtrlOne', function($scope){
+    $scope.hello = "Hello!!";
+    $scope.asdfClass = "btn btn-primary";
 });
