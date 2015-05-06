@@ -1,4 +1,4 @@
-angular.module('JuliusAkula',['ui.bootstrap', 'ui.router', 'ngClipboard']).config(['ngClipProvider', '$stateProvider', '$urlRouterProvider', function(ngClipProvider, $stateProvider, $urlRouterProvider){
+angular.module('JuliusAkula',['ui.bootstrap', 'ui.router', 'ngClipboard', 'yaru22.md']).config(['ngClipProvider', '$stateProvider', '$urlRouterProvider', function(ngClipProvider, $stateProvider, $urlRouterProvider){
     
     $urlRouterProvider.otherwise("/");
     $stateProvider.state('index', {
@@ -38,4 +38,14 @@ angular.module('JuliusAkula',['ui.bootstrap', 'ui.router', 'ngClipboard']).confi
 }]).controller('CtrlOne', function($scope){
     $scope.hello = "Hello!!";
     $scope.asdfClass = "btn btn-primary";
-});
+}).controller('textInputController', function($scope, dataPassing){
+    $scope.text = dataPassing.text;
+    $scope.$watch('text', function(newVal, oldVal){
+        dataPassing.text = newVal;
+    });
+}).controller('readmeOutputController', function($scope, dataPassing){
+    $scope.text = dataPassing;
+    $scope.$watch('text', function(newVal, oldVal){
+        dataPassing.text = newVal;
+    });
+}).service('dataPassing', function(){ return { text: ''}; } );

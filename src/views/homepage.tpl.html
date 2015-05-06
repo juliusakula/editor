@@ -2,3 +2,9 @@
     <h1 class="text-center">Create Markdown And Copy it</h1>
     <p>Enter text on the left and watch it appear on the right. This tool will give you a preview of compiled markdown and provide a 'copy to clipboad' button, so you can paste the text into your Readme.md files.</p>
 </div>
+<div ng-controller="textInputController">
+    <textarea rows="3" ng-model="input"></textarea>
+</div>
+<div ng-controller="readmeOutputController">
+    <md ng-model="mdText"></md>
+</div>
