@@ -18,13 +18,7 @@
 <script src="app.js"></script>
 </head>
 <body ng-app="JuliusAkula">
-    <div>
-        <button class="btn btn-primary">Wooooooo</button>
-    </div>
-    <div ng-controller="CtrlOne">  
-        <button ng-class="asdfClass">Wooooooo</button>
-        <h1 class="small text-muted">{{hello}}</h1>
-    </div>
+    <div ng-include="'src/views/nav.tpl.html'"></div>
 </div>
     <div ui-view></div>
 </body>
