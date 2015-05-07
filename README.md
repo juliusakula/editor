@@ -9,8 +9,7 @@ var text = "All Markdown features are supported";
 console.log(text);
 ```
 ---
-<style>span { color: green; }</style>
-<b style="color: navy;">Raw HTML <span>and CSS</span> will render, too</b>
+<b style="color: navy;">Raw HTML will render, too</b>
 <hr>
 
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
