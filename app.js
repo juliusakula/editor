@@ -43,4 +43,10 @@ angular.module('JuliusAkula',['ui.bootstrap', 'ui.router', 'ngClipboard', 'yaru2
     $scope.fallback = function(copy) {
         window.prompt('Press cmd+c to copy the text below.', copy);
     };
+
+    $scope.clearText = function(text){
+        if($scope.text == text) $scope.text = '';
+    };
+
+    $scope.pasteArea = '';
 });

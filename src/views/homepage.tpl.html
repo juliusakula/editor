@@ -1,16 +1,16 @@
 <div ng-controller="textInputController">
     <div class="row">
-        <h1 class="text-center" style="margin-top: -10px; margin-bottom: 10px;">Create Markdown And Copy it</h1>
-        <div class="col-lg-6">
-            <p style="margin: 10px 0 0 25px;">Enter Markdown on the left and watch it render on the right.</p>
+        <div class="col-lg-6 btn-group">
+            <button class="btn btn-danger"  clip-copy="text" clip-click="clearText(text)">Clear Editor</button>
+            <button class="btn btn-success" clip-copy="text" clip-click-fallback="fallback(text)">Copy to Clipboard</button>
         </div>
-        <div class="col-lg-6">
-            <style>.btn { margin-top: 0; }</style>
-            <button class="btn btn-success" clip-copy="text" clip-click-fallback="fallback(text)">I'm Done - Copy to Clipboard</button>
+        <p class="hidden-lg">&nbsp</p>
+        <div class="col-lg-6 text-center btn-group">
             <a class="btn btn-primary" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown CheatSheet</a>
             <a class="btn btn-info" href="https://github.com/juliusakula/editor/">View Source Code</a>
         </div>
     </div>
+
     <div class="row">
         <div class="col-lg-6">
             <br>
