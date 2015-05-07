@@ -33,19 +33,14 @@ angular.module('JuliusAkula',['ui.bootstrap', 'ui.router', 'ngClipboard', 'yaru2
             }];
         }
     });
-    
-    ngClipProvider.setPath("/node_modules/zeroclipboard/dist/ZeroClipboard.swf");
-}]).controller('CtrlOne', function($scope){
-    $scope.hello = "Hello!!";
-    $scope.asdfClass = "btn btn-primary";
-}).controller('textInputController', function($scope, dataPassing){
-    $scope.text = dataPassing.text;
-    $scope.$watch('text', function(newVal, oldVal){
-        dataPassing.text = newVal;
+    ngClipProvider.setPath("node_modules/zeroclipboard/dist/ZeroClipboard.swf");
+
+}]).controller('textInputController', function($scope, $http){
+    $http({method: "GET", url: "README.md"}).success(function(data, status, headers, config) {
+        $scope.text = data;
     });
-}).controller('readmeOutputController', function($scope, dataPassing){
-    $scope.text = dataPassing;
-    $scope.$watch('text', function(newVal, oldVal){
-        dataPassing.text = newVal;
-    });
-}).service('dataPassing', function(){ return { text: ''}; } );
+
+    $scope.fallback = function(copy) {
+        window.prompt('Press cmd+c to copy the text below.', copy);
+    };
+});

@@ -10,12 +10,10 @@
 <link rel="stylesheet" href="main.css">
 
 <script src="node_modules/marked/marked.min.js"></script>
-<script src="node_modules/highlight/lib/highlight.js"></script>
 
 <script src="node_modules/angular-builds/angular.js"></script>
-
-<script src="node_modules/ng-clip/src/ngClip.js"></script>
 <script src="node_modules/zeroclipboard/dist/ZeroClipboard.js"></script>
+<script src="node_modules/ng-clip/src/ngClip.js"></script>
 <script src="node_modules/angular-ui-router/build/angular-ui-router.min.js"></script>
 <script src="node_modules/angular-ui-bootstrap/ui-bootstrap.min.js"></script>
 <script src="node_modules/angular-md/dist/angular-md.js"></script>
@@ -23,8 +21,9 @@
 <script src="app.js"></script>
 </head>
 <body ng-app="JuliusAkula">
+<div class="container">
     <div ng-include="'src/views/nav.tpl.html'"></div>
-</div>
     <div ui-view></div>
+</div>
 </body>
 </html>

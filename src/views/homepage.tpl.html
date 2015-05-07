@@ -1,14 +1,24 @@
-<div class="row">
-    <h1 class="text-center">Create Markdown And Copy it</h1>
-    <p>Enter text on the left and watch it appear on the right. This tool will give you a preview of compiled markdown and provide a 'copy to clipboad' button, so you can paste the text into your Readme.md files.</p>
-</div>
-<div class="row">
-    <div ng-controller="textInputController" class="col-xs-5 col-xs-offset-1">
-        <br>
-        <textarea rows="3" ng-model="text" style="width: 100%;"></textarea>
+<div ng-controller="textInputController">
+    <div class="row">
+        <h1 class="text-center" style="margin-top: -10px; margin-bottom: 10px;">Create Markdown And Copy it</h1>
+        <div class="col-lg-6">
+            <p style="margin: 10px 0 0 25px;">Enter Markdown on the left and watch it render on the right.</p>
+        </div>
+        <div class="col-lg-6">
+            <style>.btn { margin-top: 0; }</style>
+            <button class="btn btn-success" clip-copy="text" clip-click-fallback="fallback(text)">I'm Done - Copy to Clipboard</button>
+            <a class="btn btn-primary" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown CheatSheet</a>
+            <a class="btn btn-info" href="https://github.com/juliusakula/editor/">View Source Code</a>
+        </div>
     </div>
-    <div ng-controller="readmeOutputController" class="col-xs-5">
-        <br>
-        <md ng-model="text.text"></md>
+    <div class="row">
+        <div class="col-lg-6">
+            <br>
+            <textarea rows="20" ng-model="text" style="width: 100%;"></textarea>
+        </div>
+        <div class="col-lg-6">
+            <br>
+            <md ng-model="text"></md>
+        </div>
     </div>
 </div>
