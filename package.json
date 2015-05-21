@@ -7,7 +7,9 @@
     "angular": "1.2.14",
     "angular-builds": "https://github.com/DanTup/angular-builds/tarball/1.2.14",
     "angular-cookies": "^1.3.13",
+    "angular-markdown-directive": "^0.3.1",
     "angular-md": "^1.0.0",
+    "angular-sanitize": "^1.3.15",
     "angular-ui-router": "^0.2.13",
     "bootstrap": "^3.3.2",
     "chai": "^2.0.0",
@@ -29,6 +31,7 @@
     "jquery-ui": "^1.10.5",
     "marked": "^0.3.3",
     "ng-clip": "^0.2.6",
+    "showdown": "^1.0.0-alpha.2",
     "zeroclipboard": "^2.2.0"
   }
 }

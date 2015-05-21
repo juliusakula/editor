@@ -1,5 +1,7 @@
-angular.module('JuliusAkula',['ui.bootstrap', 'ui.router', 'ngClipboard', 'yaru22.md']).config(['ngClipProvider', '$stateProvider', '$urlRouterProvider', function(ngClipProvider, $stateProvider, $urlRouterProvider){
-    
+angular.module('JuliusAkula',['ui.bootstrap', 'ui.router', 'ngClipboard', 'btford.markdown'])
+    .config(['ngClipProvider', '$stateProvider', '$urlRouterProvider',
+     function(ngClipProvider,   $stateProvider,   $urlRouterProvider){
+
     $urlRouterProvider.otherwise("/");
     $stateProvider.state('index', {
         url: "/",
